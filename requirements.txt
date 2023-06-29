@@ -10,6 +10,7 @@ constantly==15.1.0
 crispy-bootstrap4==2022.1
 cryptography==41.0.1
 daphne==4.0.0
+dj-database-url==2.0.0
 Django==4.2.2
 django-crispy-forms==2.0
 hyperlink==21.0.0
@@ -17,10 +18,12 @@ idna==3.4
 incremental==22.10.0
 msgpack==1.0.5
 Pillow==9.5.0
+psycopg2==2.9.6
 pyasn1==0.5.0
 pyasn1-modules==0.3.0
 pycparser==2.21
 pyOpenSSL==23.2.0
+python-dotenv==1.0.0
 redis==4.6.0
 service-identity==23.1.0
 six==1.16.0

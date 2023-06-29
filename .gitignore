@@ -3,3 +3,6 @@ chat-ui-responsive/
 .venv/
 __pycache__/
 /static/
+backend/settings/.env.prod
+backend/settings/prod.py
+backend/settings.py
