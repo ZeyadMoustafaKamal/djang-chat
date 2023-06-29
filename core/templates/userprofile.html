@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    
+    {% if user_obj %}
+    <div style="min-width:100px" class="container mt-4 mb-4 p-3 d-flex justify-content-center w-100"> 
+        <div class="card w-50 p-4"> 
+            <div class="image d-flex flex-column justify-content-center align-items-center"> 
+                    <img class="w-25 h-50" src="{{user_obj.profile.picture.url}}"/>
+                <span class="name mt-3">{{user_obj.profile.display_name}}</span> 
+                <span class="idd name">@{{user_obj.username}}</span> 
+                <div class="d-flex flex-row justify-content-center align-items-center"> 
+                    <span class="idd1">{{user_obj.id}} <button onclick="navigator.clipboard.writeText('{{user_obj.id}}')"><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M448 384H256c-35.3 0-64-28.7-64-64V64c0-35.3 28.7-64 64-64H396.1c12.7 0 24.9 5.1 33.9 14.1l67.9 67.9c9 9 14.1 21.2 14.1 33.9V320c0 35.3-28.7 64-64 64zM64 128h96v48H64c-8.8 0-16 7.2-16 16V448c0 8.8 7.2 16 16 16H256c8.8 0 16-7.2 16-16V416h48v32c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V192c0-35.3 28.7-64 64-64z"/></svg></button></span>
+                </div> 
+                <div class=" d-flex mt-2"> 
+                    <a href="{% url 'chat' user_id=user_obj.id %}" class="btn btn-dark">Chat</a> 
+                </div> 
+                <div class="text mt-3"> 
+                    <span>{{user_obj.profile.bio}}
+                    </span> 
+                </div> 
+                <div class="gap-3 mt-3 icons d-flex flex-row justify-content-center align-items-center"> 
+                    <span><i class="fa fa-twitter"></i></span> <span><i class="fa fa-facebook-f"></i></span> 
+                    <span><i class="fa fa-instagram"></i></span> <span><i class="fa fa-linkedin"></i></span> 
+                </div> <div class=" px-2 rounded mt-4 date "> <span class="join">{{user_obj.date_joined|date}}</span> </div> 
+            </div> 
+        </div>
+    </div>
+    {% else %}
+        <h2>No user found</h2>
+    {% endif %}
+
+
+{% endblock content %}
+

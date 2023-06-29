@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+    
+    {% if users %}
+        
+        {% for user_obj in users %}
+        <div class="card" style="width: 18rem;">
+            <img src="{{user_obj.profile.picture.url}}" class="card-img-top" alt="{{user_obj.username}}">
+            <div class="card-body">
+              <h5 class="card-title">{{user_obj.profile.display_name}} <h6>@{{user_obj.username}}</h6></h5>
+              <p class="card-text">{{user_obj.profile.bio}}</p>
+              <a href="{{user_obj.get_absolute_url}}" class="btn btn-primary">visit</a>
+            </div>
+          </div>
+        {% endfor %}
+            
+    {% else %}
+        <h3>No users found for this search keyword</h3>
+    {% endif %}
+        
+
+    
+{% endblock content %}
+    
