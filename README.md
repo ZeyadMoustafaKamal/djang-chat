@@ -1,12 +1,12 @@
 ### Hello in my chat app
 
 #### I made this app using these technologies
-- `Python`
-- `Django`
-- `sqlite3 for development and PostgreSQL for the production`
-- `HTML, CSS, JS for the frontent`
-- `Django channels from creating the websockets`
-- `Make for professional automation`
+- Python
+- Django
+- sqlite3 for development and PostgreSQL for the production
+- HTML, CSS, JS for the frontend
+- Django channels from creating the websockets
+- Make for professional automation
 #### You can run these commands to run the project locally in your local machiene using make
 
 ```
